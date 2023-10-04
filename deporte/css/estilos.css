@@ -1,0 +1,497 @@
+:root{
+    --verde:#00A149;
+    --blanco:#fff;
+    --rojo:#881014;
+    --oscuro:#000;
+    --titulos:'Arima Madurai',cursive;
+    --parrafos:'Mulish', sans-serif;
+}
+html{
+    box-sizing: border-box;
+    /*1rem = 10px*/
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    BACKGROUND-COLOR: #eee;
+}
+
+*,*::after, *::before{
+    box-sizing: inherit;
+}
+/*globales*/
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 95%;
+}
+h1,h2{
+    font-family: 'Montserrat', sans-serif;
+}
+h3, p, a{
+    font-family: 'Montserrat', sans-serif;
+}
+
+img{
+    max-width: 100%;
+}
+.verde{
+    color: var(--verde);
+}
+.rojo{
+    color: var(--rojo);
+}
+.ocultar{
+    display: none;
+}
+.btn-cerrar{
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--blanco);
+    position: absolute;
+    top: 0;
+    right: 50px;
+    user-select: none;
+
+}
+.pantalla-completa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.5);
+    z-index: 4;
+}
+
+@keyframes desplazamiento {
+    0%{
+        transform: translateX(100%);
+    }
+
+    100%{
+        transform:translateX(0);
+    }
+}
+
+.btn-cerrar:hover{
+    cursor: pointer;
+}
+
+.btn{
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 2rem;
+    text-transform: capitalize;
+    padding: 1rem 5rem;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+
+@media(min-width: 768px) {
+    .btn{
+        font-size: 2.2rem;
+    }
+}
+.bordes{
+    border: 3px solid var(--blanco);
+}
+@media(min-width: 768px) {
+    .bordes{
+        border: 4px solid var(--blanco);
+    }
+}
+
+.bordes:hover{
+    color: var(--verde);
+    background-color: var(--blanco);
+}
+.btn-rojo{
+    background-color: var(--rojo);
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.btn-verde{
+    background-color: rgb(19 36 49);
+    border: none;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-family: var(--parrafos);
+}
+.btn-verde:hover{
+    background-color: rgb(56, 114, 165);
+}
+/*encabezado*/
+.contenedor-navegacion{
+    background-color: #eee;;
+    position: relative;
+    z-index: 5;
+    box-shadow: -1px -1px 15px -7px rgba(0,0,0,0.45);
+  
+}
+.contenido-navegacion{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+   
+}
+.logo h2, .navegacion a {
+  color: #3c98b5;  
+}
+.logo h2{
+    font-size: 3rem;
+    font-family: 'Tourney', cursive;
+}
+.navegacion a{
+    text-decoration: none;
+    font-size: 2.2rem;
+    padding: 1.5rem;
+    padding-left: 4rem;
+    display: block;
+    transition: color .3s ease-in-out;
+    text-align: center;
+    color: #fff;
+    z-index: 5;
+}
+
+@media(min-width: 768px) {
+    .navegacion a{
+        text-align: left;
+    }
+    .image3 img {
+        width: 261px;
+        margin-left: -1823px;
+        height: 190px;
+        margin-bottom: 0;
+        margin-top: -86px;
+    }
+    
+}
+
+a {
+    color: #fff;
+}
+
+.navegacion a:nth-child(even):hover{
+    color: var(--rojo);
+}
+.navegacion a:nth-child(odd):hover{
+    color: var(--verde);
+}
+.navegacion a:first-of-type{
+    margin-top: 5rem;
+}
+.navegacion{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 40rem;
+    padding: 3rem 4rem;
+    background-color: #2da0b1a8;
+    animation: desplazamiento .5s ease-in-out;
+    z-index: 5;
+}
+
+.hamburguesa:hover{
+    cursor: pointer;
+}
+
+.hamburguesa span{
+    background-color: #3c98b5;
+    display: block;
+    width: 5rem;
+    height: .5rem;
+    margin-bottom: .5rem;
+}
+
+.nosotros h2{
+    text-align: center;
+    font-size: 4rem;
+    color: #3c98b5;
+}
+@media(min-width: 768px) {
+    .nosotros h2{
+        font-size: 5rem;
+    }
+}
+.contenido-nosotros{
+    background-image: url(../assets/torno.jpeg);
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    background-size: cover;
+    background-position: center center;
+}
+
+@media(min-width: 468px) {
+    .contenido-nosotros{
+        grid-template-columns:repeat(2,1fr);
+        /* background-attachment: fixed; */
+    }
+    .texto-encabezado h2 {
+        color: var(--blanco);
+        font-size: 3rem;
+    }
+}
+
+
+.texto-nosotros{
+    padding: 2rem;
+    grid-row: 2/3;
+    background-color: #eee;;
+}
+
+@media(min-width: 768px) {
+    .texto-nosotros{
+        padding:5rem;
+    }
+}
+
+.texto-nosotros h3{
+    font-size: 4rem;
+    color: var(--azulClaro);
+    text-align: center;
+}
+
+.texto-nosotros p{
+    font-size: 2.2rem;
+    text-align: center;
+}
+@media(min-width: 768px) {
+    .texto-nosotros p{
+        text-align: left;
+    }
+}
+.image2 img {
+    width: 79px;
+    left: 42px;
+    top: 0px;
+    z-index: 1;
+    position: absolute;
+    background-image: url(/WhatsApp\ Video\ 2023-09-19\ at\ 10.24.04.mp4);
+}
+
+.servicios {
+    padding-top: 5rem;
+    margin-bottom: 96px;
+}
+
+@media(max-width: 499px) {
+
+    .image2 img{
+    display: none;}
+
+    .image3 img{
+    margin-left: 63px;
+    }
+}
+
+.servicios h2{
+    font-size: 5rem;
+    text-align: center;
+    color: var(--azulClaro);
+}
+
+@media(min-width: 768px) {
+    .contenido-servicios{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 4rem;
+        
+    }
+}
+
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.servicio i {
+    background-color: #3872a5;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 3rem;
+    box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.45);
+    transition: all .3s ease-in-out;
+}
+
+.servicio h3{
+    font-size: 2.2rem;
+    color: var(--azulOscuro);
+}
+.servicio p{
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+@media(min-width: 768px) {
+    .servicio p{
+        text-align: left;
+    }
+}
+
+@media(min-width: 768px) {
+    .servicio:hover{
+        cursor: pointer;
+    }
+
+    .servicio:hover .fas {
+        background-color: var(--blanco);
+        color: var(--azulClaro);
+    }
+}
+
+.pie-pagina{
+    margin-top: 5rem;
+    background-color:rgb(62 103 133);
+    padding: 5rem;
+}
+@media(min-width:768px){
+    .contenedor-piepagina{
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+.info{
+    flex: 0 0 calc(25% - 1rem);
+    margin-bottom: 2rem;
+}
+.info h3, .info p{
+    color: var(--blanco);
+    text-align: center;
+}
+.info h3{
+    font-size: 2.2rem;
+}
+.info p{
+    font-size: 1.8rem;
+}
+
+.redes-pie{
+    text-align: center;
+    color: aliceblue;
+}
+.info input[type="email"] {
+    font-family: var(--parrafos);
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 16px;
+    outline: none;
+    width: 100%;
+    BORDER: NONE;
+}
+
+.info input[type="submit"]{
+    padding: .5rem 2rem;
+    font-size: 1.8rem;
+    border-radius: 12px;
+}
+.footer{
+    text-align: center;
+    background-color: rgb(19 36 49);
+    color: var(--blanco);
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+/* Questions */
+
+.questions{
+    text-align: center;
+    margin-top: 66px;
+}
+
+.questions__container{
+    display: grid;
+    gap: 2em;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    width: 90%;
+    max-width: 1208px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--padding-container);
+}
+
+.questions__padding {
+    padding: 0;
+    transition: padding .3s;
+    border: 1px solid rgb(56, 114, 165);
+    border-radius: 6px;
+}
+.questions__padding--add{
+    padding-bottom: 30px;
+}
+
+.questions__answer{
+    padding: 0 30px 0;
+    overflow: hidden;
+}
+
+.questions__title {
+    text-align: left;
+    display: flex;
+    font-size: 20px;
+    padding: 30px 0 30px;
+    cursor: pointer;
+    color: rgb(56, 114, 165);
+    justify-content: space-between;
+}
+
+
+
+.questions__arrow{
+    border-radius: 50%;
+    background-color: var(--color-title);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    margin-left: 10px;
+    transition:  transform .3s;
+}
+
+.questions__arrow--rotate{
+    transform: rotate(180deg);
+}
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #3872a5;
+}
+
+.questions__show{
+    text-align: left;
+    height: 0;
+    transition: height .3s;
+}
+
+.questions__img{
+    display: block;
+}
+
+.questions__copy{
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+h3, p, a {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: auto;
+}
